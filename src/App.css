@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(58, 57, 57);
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 0 1.5rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  height: 50px;
+  color: #333; 
+  font-size: 1.2rem; 
+  border-radius: 5px; 
+  margin-bottom: 1rem; 
+} */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 0rem 0rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  height: 50px;
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .header input {
+    width: 100%; /* Make input full width on smaller screens */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Additional responsive adjustments for even smaller screens if needed */
+@media (max-width: 480px) {
+  .header input {
+    width: 80%; /* Adjust width to 80% for screens with a maximum width of 480px or less */
+  }
+}
+
+.container {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  align-items: center;
+  margin: 1rem 2rem;
+  /* max-width:max-content; */
+}
+
+.section-head {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.review-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cards {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin-top: 0.5rem;
+  padding: 10px 15px 10px 15px;
+}
+
+.card:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(201, 197, 197);
+}
+
+.header input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  width: 150px;
+  box-sizing: border-box; /* Include padding and border in the total width and height */
+  margin-bottom: 1rem; /* Optional margin for spacing between inputs */
+}
+
+/* Adjust input styles for smaller screens */
+@media screen and (max-width: 600px) {
+  .header input {
+    max-width: 120px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Adjust input styles for larger screens */
+@media screen and (min-width: 1000px) {
+  .header input {
+    max-width: 200px;
   }
 }

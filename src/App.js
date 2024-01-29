@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavBar from "./NavBar";
+import "./App.css"
 
-function App() {
+const App = () => {
+  // const [url, setUrl] = useState("");
+  // const [result, setResult] = useState("");
+  // const [error, setError] = useState("");
+  // const [reviews, setReviews] = useState([]);
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   try {
+  //     const response = await axios.post("http://localhost:5000/api/summarize", {
+  //       url,
+  //     });
+  //     setReviews(response.data.reviews);
+  //     setResult(response.data.result);
+  //     setError("");
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //     setResult("");
+  //     setError("Error fetching data. Please check your URL and try again.");
+  //   }
+  // };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar></NavBar>
+    </>
   );
-}
+};
 
 export default App;
