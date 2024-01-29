@@ -6,10 +6,12 @@ export default function Review({ reviews }) {
   const cardElement = useRef();
 
   function setMaxHeight() {
-    const cardHeight = cardElement.current.getBoundingClientRect().height;
-    console.log("cardheight", cardHeight);
-    console.log("cardElement", cardElement);
-    setHeight(Math.max(cardHeight, 100));
+    if (cardElement.current){
+      const cardHeight = cardElement.current.getBoundingClientRect().height;
+      console.log("cardheight", cardHeight);
+      console.log("cardElement", cardElement);
+      setHeight(Math.max(cardHeight, 100));
+    }
   }
 
   useEffect(setMaxHeight, [reviews]);
